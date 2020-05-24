@@ -3,7 +3,7 @@ import axios from 'axios'
 export function request(config) {
 
   const instance = axios.create({
-    baseURL: 'http://152.136.185.210:8000/api/n3',
+    baseURL: 'http://152.136.185.210:8000',
     timeout: 5000
   })
 
@@ -15,7 +15,7 @@ export function request(config) {
   })
 
   instance.interceptors.response.use(res=>{
-    // console.log(res.data)
+    // console.log(res.data /api/n3)
     return res.data  //return res  进行放行
   },error => {})
 
